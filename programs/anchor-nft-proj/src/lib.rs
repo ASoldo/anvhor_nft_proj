@@ -5,7 +5,7 @@ use crate::states::{PostAccount, UserAccount};
 
 use anchor_lang::prelude::*;
 
-declare_id!("BqWZM1vE46HuM5yTD9oMaMitjG1572QYwoNZFxW3yTgE");
+declare_id!("4umgg1o6eeuzP7S4k6u6vKZQuaoin4VXwSNMRFVJ7uzs");
 
 #[program]
 pub mod anchor_nft_proj {
@@ -50,7 +50,7 @@ pub struct InitUser<'info> {
         seeds = [USER_SEED, authority.key().as_ref()],
         bump,
         payer = authority,
-        space = 2346 + 8
+        space = UserAccount::INIT_SPACE + 8
     )]
     pub user_account: Account<'info, UserAccount>,
 
@@ -68,7 +68,7 @@ pub struct CreatePost<'info> {
         seeds = [POST_SEED, authority.key().as_ref(), &[user_account.last_post_id as u8].as_ref()],
         bump,
         payer = authority,
-        space = 2377 + 8
+        space = PostAccount::INIT_SPACE + 8
     )]
     pub post_account: Account<'info, PostAccount>,
 

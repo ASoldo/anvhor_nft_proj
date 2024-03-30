@@ -6,7 +6,7 @@ edition = "2021"
 
 [lib]
 crate-type = ["cdylib", "lib"]
-name = "anchor_nft_proj"
+name = "anchor_nft_proj_1"
 
 [features]
 no-entrypoint = []

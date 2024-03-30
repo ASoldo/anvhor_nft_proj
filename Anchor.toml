@@ -5,7 +5,7 @@ seeds = false
 skip-lint = false
 
 [programs.devnet]
-anchor_nft_proj = "BqWZM1vE46HuM5yTD9oMaMitjG1572QYwoNZFxW3yTgE"
+anchor_nft_proj = "4umgg1o6eeuzP7S4k6u6vKZQuaoin4VXwSNMRFVJ7uzs"
 
 [registry]
 url = "https://api.apr.dev"
